@@ -1,0 +1,29 @@
+# This is a template for generating Dockerfile for custom machine learning use case
+# Check more details in use_case_util.py
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+ENV VENV /opt/venv
+ENV LANG C.UTF-8
+ENV LC_ALL C.UTF-8
+ENV PYTHONPATH /app
+
+RUN apt-get update && apt-get install -y build-essential
+
+RUN python3 -m venv ${VENV}
+ENV PATH="${VENV}/bin:$PATH"
+
+COPY picrystal_test /app/picrystal_test
+COPY <custom_usecases> /app/<custom_usecases>
+COPY setup.py /app
+RUN pip install -e /app
+
+# COPY picrystal /app/picrystal
+# RUN pip install -e /app/picrystal
+
+WORKDIR /app/<custom_usecases>
+RUN pip install -r requirements.txt
+
+ENTRYPOINT ["python", "use_case.py"]

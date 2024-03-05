@@ -1,0 +1,6 @@
+# This is the pip requirements file for test_platform module
+
+fastapi[all]
+uvicorn[standard]
+docker
+shortuuid

@@ -1,0 +1,185 @@
+{
+    "ny_missing_values": {
+        "function": "missing values",
+        "specification": {
+        "features": {
+            "gender_feature": ["sex"],
+            "race_feature": ["race"]
+        }
+        }
+    },
+    "ny_demographic_parity_gender": {
+        "function": "demographic parity (NYC)",
+        "specification": {
+        "features": {
+            "gender_feature": ["sex"]
+        },
+        "output": "demographic parity"
+        }
+    },
+    "ny_demographic_parity_race": {
+        "function": "demographic parity (NYC)",
+        "specification": {
+        "features": {
+            "race_feature": ["race"]
+        },
+        "output": "demographic parity"
+        }
+    },
+    "ny_demographic_parity_gender_race": {
+        "function": "demographic parity (NYC)",
+        "specification": {
+        "features": {
+            "gender_feature": ["sex"],
+            "race_feature": ["race"]
+        },
+        "output": "demographic parity"
+        }
+    },
+    "aic_extended_confusion_matrix": {
+        "function": "extended binary confusion matrix",
+        "specification": {}
+    },
+    "aic_confusion_matrix": {
+        "function": "confusion matrix",
+        "specification": {}
+    },
+    "aic_averaged_confusion_matrix": {
+        "function": "averaged extended confusion matrix",
+        "specification": {}
+    },
+    "aic_robustness_binary": {
+        "function": "robustness extended binary confusion matrix",
+        "specification": {}
+    },
+    "aic_robustness_mclass": {
+        "function": "robustness averaged extended confusion matrix",
+        "specification": {}
+    },
+    "aic_equalized_odds_tpr": {
+        "function": "equalized odds tpr",
+        "specification": {
+        "features": {
+            "feature_tag": ["sensitive"]
+        },
+        "output": "metric"
+        }
+    },
+    "aic_equalized_odds_fpr": {
+        "function": "equalized odds fpr",
+        "specification": {
+        "features": {
+            "feature_tag": ["sensitive"]
+        },
+        "output": "metric"
+        }
+    },
+    "aic_equal_opportunity": {
+        "function": "equal opportunity",
+        "specification": {
+        "features": {
+            "feature_tag": ["sensitive"]
+        },
+        "output": "metric"
+        }
+    },
+    "aic_demographic_parity": {
+        "function": "demographic parity (NYC)",
+        "specification": {
+        "features": {
+            "feature_tag": ["sensitive"]
+        },
+        "output": "demographic parity"
+        }
+    },
+    "aic_predictive_parity": {
+        "function": "predictive parity",
+        "specification": {
+        "features": {
+            "feature_tag": ["sensitive"]
+        },
+        "output": "metric"
+        }
+    },
+    "roi_tp": {
+        "function": "extended binary confusion matrix",
+        "specification": { "output": "tp" }
+    },
+    "roi_tn": {
+        "function": "extended binary confusion matrix",
+        "specification": { "output": "tn" }
+    },
+    "roi_fn": {
+        "function": "extended binary confusion matrix",
+        "specification": { "output": "fn" }
+    },
+    "roi_fp": {
+        "function": "extended binary confusion matrix",
+        "specification": { "output": "fp" }
+    },
+    "roi_tn_to_fp": {
+        "function": "probability of true negative to false positive",
+        "specification": {}
+    },
+    "roi_tp_to_fn": {
+        "function": "probability of true positive to false negative",
+        "specification": {}
+    },
+    "roi_equalized_odds_tpr": {
+        "function": "equalized odds tpr",
+        "specification": {
+        "features": {
+            "feature_tag": ["sensitive"]
+        },
+        "output": "risk"
+        }
+    },
+    "roi_equalized_odds_fpr": {
+        "function": "equalized odds fpr",
+        "specification": {
+        "features": {
+            "feature_tag": ["sensitive"]
+        },
+        "output": "risk"
+        }
+    },
+    "roi_equal_opportunity": {
+        "function": "equal opportunity",
+        "specification": {
+        "features": {
+            "feature_tag": ["sensitive"]
+        },
+        "output": "risk"
+        }
+    },
+    "roi_demographic_parity": {
+        "function": "demographic parity (NYC)",
+        "specification": {
+        "features": {
+            "feature_tag": ["sensitive"]
+        },
+        "output": "risk"
+        }
+    },
+    "roi_predictive_parity": {
+        "function": "predictive parity",
+        "specification": {
+        "features": {
+            "feature_tag": ["sensitive"]
+        },
+        "output": "risk"
+        }
+    },
+    "roi_model_makes_wrong_prediction": {
+        "function": "classification error",
+        "specification": {}
+    },
+    "roi_model_makes_correct_prediction": {
+        "function": "accuracy",
+        "specification": {}
+    },
+    "roi_robustness": {
+        "function": "probability of correct labels to wrong labels",
+        "specification": {}
+    }
+}

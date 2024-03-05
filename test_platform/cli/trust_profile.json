@@ -1,0 +1,38 @@
+{
+    "performance": {
+        "function": "accuracy",
+        "specification": {}
+    },
+    "performance_f1": {
+        "function": "sklearn_cls_performance_labels",
+        "specification": {"performance_function":  "f1_score", "average": "micro"}
+    },
+    "performance_ROC_AUC": {
+        "function": "sklearn_cls_performance_probabilities",
+        "specification": {"performance_function":  "roc_auc_score"}
+    },
+    "performance_average_precision": {
+        "function": "sklearn_cls_performance_probabilities",
+        "specification": {"performance_function":  "average_precision_score"}
+    },
+    "fairness": {
+        "function": "disparate impact",
+        "specification": {
+            "feature": "sensitive"
+        }
+    },
+    "fairness_for_marriage": {
+        "function": "disparate impact",
+        "specification": {
+            "feature": "marriage"
+        }
+    },
+    "robustness": {
+	    "function": "robust prediction",
+	    "specification": {}
+    },
+    "confusion-matrix": {
+        "function": "extended binary confusion matrix",
+        "specification": {}
+    }
+}
